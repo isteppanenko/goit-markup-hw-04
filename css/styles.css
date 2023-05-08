@@ -43,6 +43,7 @@ img {
   --portfolio-bg-btm-color: #f4f4fd;
   --portfolio-bg-btm-hover: #404bbf;
   --portfolio-border-color: #e7e9fc;
+
   /* color text */
 
   --hover-portfolio-btm-color: #ffffff;
@@ -58,6 +59,18 @@ img {
 
   /* border color  */
   --header-bottom-border-color: #e7e9fc;
+
+  /* svg style  */
+  /* social-links: */
+  --icon-background-color: #4d5ae5;
+  --icon-fill-color: #f4f4fd;
+  --icon-hover-bg-color: #404bbf;
+
+  /* customers */
+  --fill-customers-color: #8e8f99;
+  --fill-customers-hover: #404bbf;
+  /* footer */
+  --icon-bg-footer-hover: #31d0aa;
 }
 .link {
   text-decoration: none;
@@ -185,7 +198,6 @@ img {
 .header-contact-link:focus {
   color: var(--hover-color-text-link);
 }
-
 /**
   |============================
   | MAIN SECTION
@@ -194,6 +206,21 @@ img {
 
 .hero {
   align-items: center;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/main-page/section-hero/people-office\ 1.jpg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  /* background-attachment: scroll; */
+  /* object-fit: none;
+  object-position: inherit; */
 
   background-color: var(--hero-bg-color);
 }
@@ -264,9 +291,25 @@ img {
 
 /**
   |============================
-  | OUR STRENGTHS SECTION
+  | OUR Skills SECTION
   |============================
 */
+/**
+  |============================
+  | icons
+  |============================
+*/
+.benefits-icon {
+  width: 264px;
+  height: 112px;
+  padding: 24px 102px;
+}
+.benefits-list {
+  display: flex;
+  gap: 24px;
+}
+.skills-icon {
+}
 
 .our-strengths {
   display: flex;
@@ -316,7 +359,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 
-  min-width: 264px;
+  max-width: 264px;
 
   color: var(--primary-color);
 }
@@ -366,17 +409,87 @@ img {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+/* SOCIAL-LINKS-ICONS */
+.social-links {
+  display: flex;
+  margin-top: 8px;
+  gap: 24px;
+}
+.social-links .icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  background: var(--icon-background-color);
+  fill: var(--icon-fill-color);
+}
+.social-links .icon-link:hover {
+  background: var(--icon-hover-bg-color);
+}
+
+/**
+  |============================
+  | our CUSTOMERS
+  |============================
+*/
+.customers-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin: 0 auto;
+}
+.section-title {
+}
+.customer-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+
+  margin-top: 72px;
+}
+
+.customers-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 168px;
+  height: 88px;
+
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+
+  fill: var(--fill-customers-color);
+}
+.customers-link:hover {
+  fill: var(--fill-customers-hover);
+
+  border-color: var(--fill-customers-hover);
+}
+
+.customers-icon {
+}
 /**
   |============================
   | FOOTER SECTION
   |============================
 */
 .footer {
+  display: flex;
   padding-top: 100px;
   padding-bottom: 100px;
 
   background-color: var(--footer-bg-color);
+}
+.footer-container {
+  max-width: 1158px;
+  padding: 0 15px;
+
+  margin: 0 120px 0 156px;
 }
 .footer-logo {
   display: inline-block;
@@ -404,6 +517,39 @@ img {
   letter-spacing: 0.02em;
 
   color: var(--footer-logo-color);
+}
+/* footer icons section */
+.footer-icons-media h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+
+  margin-bottom: 16px;
+
+  color: var(--hero-text-color);
+}
+.footer-social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.footer-social-links .icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  background: var(--icon-background-color);
+  fill: var(--icon-fill-color);
+}
+
+.footer-social-links .icon-link:hover {
+  background: var(--icon-bg-footer-hover);
 }
 
 /**
@@ -466,6 +612,10 @@ img {
 }
 .main-list .item-list {
   width: calc((100% - 48px) / 3);
+}
+.main-list .item-list:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .text-list {
   padding: 32px 16px;

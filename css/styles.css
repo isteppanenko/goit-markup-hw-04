@@ -508,11 +508,12 @@ img {
 }
 .footer-container {
   max-width: 1158px;
+  margin-right: 120px;
 }
 .footer-content {
   display: flex;
   align-items: baseline;
-  gap: 120px;
+  /* gap: 120px; */
 }
 .footer-logo {
   display: inline-block;

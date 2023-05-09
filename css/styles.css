@@ -445,7 +445,8 @@ img {
   background: var(--icon-background-color);
   fill: var(--icon-fill-color);
 }
-.social-links .icon-link:hover {
+.social-links .icon-link:hover,
+.social-links .icon-link:focus {
   background: var(--icon-hover-bg-color);
 }
 
@@ -540,7 +541,6 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-
   letter-spacing: 0.02em;
 
   color: var(--footer-logo-color);
@@ -548,9 +548,6 @@ img {
 /* footer icons section */
 .footer-icons-media p {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.02em;
 
   margin-bottom: 16px;
 
@@ -562,7 +559,7 @@ img {
   align-items: center; */
   gap: 16px;
 }
-.footer-social-list li {
+.footer-social-lists {
   width: 40px;
   height: 40px;
 }

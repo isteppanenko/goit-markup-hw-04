@@ -361,13 +361,9 @@ img {
 
 .section-text {
   /* text */
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-
-  max-width: 264px;
 
   color: var(--primary-color);
 }

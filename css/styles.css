@@ -212,12 +212,14 @@ img {
   margin: 0 auto;
 
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/main-page/section-hero/people-office\ 1.jpg);
+    url(../images/hero-img.jpg);
 
   background-color: var(--hero-bg-color);
 }
@@ -268,6 +270,11 @@ img {
 .hero-btn:focus {
   background-color: var(--hero-btm-bg-hover);
 }
+/**
+  |============================
+  | our skills 
+  |============================
+*/
 
 .strengths-section {
   padding-top: 120px;
@@ -286,11 +293,6 @@ img {
   color: var(--secondary-text-color);
 }
 
-/**
-  |============================
-  | OUR Skills SECTION
-  |============================
-*/
 /**
   |============================
   | icons
@@ -393,7 +395,7 @@ img {
 .text-container {
   display: inline-block;
   text-align: center;
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .section-team {
@@ -415,19 +417,31 @@ img {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-/* SOCIAL-LINKS-ICONS */
+/* SOCIAL-LINKS-ICONS footer */
+.social-icon-container {
+}
 .social-links {
   display: flex;
+  justify-content: center;
+
   margin-top: 8px;
   gap: 24px;
 }
-.social-links .icon-link {
+.social-links .icon-list {
   display: flex;
   justify-content: center;
   align-items: center;
 
   width: 40px;
   height: 40px;
+}
+.social-links .icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
 
   border-radius: 50%;
 
@@ -448,14 +462,17 @@ img {
   padding-bottom: 120px;
   margin: 0 auto;
 }
-.section-title {
+.customers-section .section-title {
+  margin-bottom: 72px;
 }
 .customer-list {
   display: flex;
   gap: 24px;
   justify-content: center;
-
-  margin-top: 72px;
+}
+.customer-list li {
+  width: calc((100% - 120px) / 6);
+  height: 88px;
 }
 
 .customers-link {
@@ -463,21 +480,22 @@ img {
   align-items: center;
   justify-content: center;
 
-  width: 168px;
-  height: 88px;
+  width: 100%;
+  height: 100%;
 
   border: 1px solid #8e8f99;
   border-radius: 4px;
 
   fill: var(--fill-customers-color);
 }
-.customers-link:hover {
+.customer-list .customers-link:hover {
   fill: var(--fill-customers-hover);
 
   border-color: var(--fill-customers-hover);
 }
 
 .customers-icon {
+  /* fill: currentColor; */
 }
 /**
   |============================
@@ -485,17 +503,20 @@ img {
   |============================
 */
 .footer {
-  display: flex;
   padding-top: 100px;
   padding-bottom: 100px;
+  padding-left: 156px;
 
   background-color: var(--footer-bg-color);
 }
 .footer-container {
   max-width: 1158px;
   padding: 0 15px;
-
-  margin: 0 120px 0 156px;
+  margin-right: 120px;
+}
+.footer-content {
+  display: flex;
+  align-items: baseline;
 }
 .footer-logo {
   display: inline-block;
@@ -511,6 +532,7 @@ img {
 
   color: var(--logo-color);
 }
+
 .footer-logo-studio {
   color: var(--footer-logo-color);
 }
@@ -525,7 +547,7 @@ img {
   color: var(--footer-logo-color);
 }
 /* footer icons section */
-.footer-icons-media h3 {
+.footer-icons-media p {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -535,18 +557,22 @@ img {
 
   color: var(--hero-text-color);
 }
-.footer-social-links {
+.footer-social-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   gap: 16px;
 }
-.footer-social-links .icon-link {
+.footer-social-list li {
+  width: 40px;
+  height: 40px;
+}
+.footer-social-list .icon-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
 
   border-radius: 50%;
 
@@ -554,7 +580,8 @@ img {
   fill: var(--icon-fill-color);
 }
 
-.footer-social-links .icon-link:hover {
+.footer-social-list .icon-link:hover,
+.footer-social-list .icon-link:focus {
   background: var(--icon-bg-footer-hover);
 }
 
@@ -616,13 +643,18 @@ img {
   column-gap: 24px;
   row-gap: 48px;
 }
-.main-list .item-list {
-  width: calc((100% - 48px) / 3);
+.item-link {
+  display: block;
 }
-.main-list .item-list:hover {
+.item-link:hover,
+.item-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+.main-list .item-list {
+  width: calc((100% - 48px) / 3);
+}
+
 .text-list {
   padding: 32px 16px;
 
